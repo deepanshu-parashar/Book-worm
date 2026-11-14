@@ -26,6 +26,7 @@
   "book.unknownTitle": "Unknown book",
   "book.unknownHint": "I don't know this book well enough to describe it. Read the blurb yourself.",
   "book.uncertainHint": "Not confirmed in a catalogue. Details may be wrong.",
+  "book.noSummaryHint": "The book is in the catalogue, but I don't know it well enough to describe it. Read the blurb yourself.",
   "book.took": "I took it",
   "book.skipped": "Skipped",
   "book.saved": "Saved to My finds",

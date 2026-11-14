@@ -25,7 +25,10 @@ export default function BookDetail() {
     <Page title={book.title || t('book.unknownTitle')}>
       <section className="detail">
         <div className="headline">
-          {book.coverUrl && <img className="cover" src={book.coverUrl} alt="" />}
+          {book.coverUrl && (
+            <img className="cover" src={book.coverUrl} alt="" referrerPolicy="no-referrer"
+              onError={(e) => { e.currentTarget.hidden = true; }} />
+          )}
           <div>
             {book.author && <p className="author">{book.author}</p>}
             <ConfidenceBadge confidence={book.confidence} />
@@ -47,7 +50,9 @@ export default function BookDetail() {
         ) : (
           <>
             {book.summary && <p className="summary">{book.summary}</p>}
-            {book.confidence === 'uncertain' && <p className="muted small">{t('book.uncertainHint')}</p>}
+            {book.confidence === 'uncertain' && (
+              <p className="muted small">{t(book.summary ? 'book.uncertainHint' : 'book.noSummaryHint')}</p>
+            )}
           </>
         )}
 

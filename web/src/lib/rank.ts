@@ -8,7 +8,7 @@ export const MIN_RECOMMEND = 50;
 export function splitShelf(results: ScoredBook[]): { top: ScoredBook[]; rest: ScoredBook[] } {
   const sorted = [...results].sort((a, b) => b.score.value - a.score.value);
   const top = sorted
-    .filter((r) => r.book.confidence !== 'unknown' && r.score.value >= MIN_RECOMMEND)
+    .filter((r) => r.book.confidence !== 'unknown' && r.score.cappedBy !== 'unknown' && r.score.value >= MIN_RECOMMEND)
     .slice(0, TOP_COUNT);
   const rest = sorted.filter((r) => !top.includes(r));
   return { top, rest };

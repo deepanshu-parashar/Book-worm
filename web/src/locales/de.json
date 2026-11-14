@@ -26,6 +26,7 @@
   "book.unknownTitle": "Unbekanntes Buch",
   "book.unknownHint": "Ich kenne dieses Buch nicht gut genug, um es zu beschreiben. Lies selbst den Klappentext.",
   "book.uncertainHint": "Nicht in einem Katalog bestätigt. Angaben können falsch sein.",
+  "book.noSummaryHint": "Das Buch steht im Katalog, aber ich kenne es nicht gut genug, um es zu beschreiben. Lies selbst den Klappentext.",
   "book.took": "Mitgenommen",
   "book.skipped": "Stehen gelassen",
   "book.saved": "In Meine Funde gespeichert",

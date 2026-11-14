@@ -26,7 +26,7 @@ export function scoreTone(value: number): 'good' | 'mid' | 'low' {
 }
 
 export function ScoreBadge({ item, large }: { item: ScoredBook; large?: boolean }) {
-  const unknown = item.book.confidence === 'unknown';
+  const unknown = item.book.confidence === 'unknown' || item.score.cappedBy === 'unknown';
   return (
     <span className={`score ${unknown ? 'none' : scoreTone(item.score.value)} ${large ? 'large' : ''}`}>
       {unknown ? '?' : Math.round(item.score.value)}
