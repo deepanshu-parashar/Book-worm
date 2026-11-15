@@ -1,0 +1,9 @@
+{
+  "name": "Scan to Recommend",
+  "short_name": "Scan2Rec",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ec",
+  "theme_color": "#2f5d50",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
